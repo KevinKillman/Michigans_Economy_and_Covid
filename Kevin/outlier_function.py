@@ -3,8 +3,8 @@ def outlier(series):
     import pandas as pd
     index_counter = 0
     describe_series = series.describe()
-    q1 = describe_series['25%']
-    q3 = describe_series['75%']
+    q3 = describe_series['25%']
+    q1 = describe_series['75%']
     iqr = q3-q1
     lower_bound = q1 - (1.5 * iqr)
     upper_bound = q3 + (1.5 * iqr)
